@@ -682,7 +682,7 @@ function parseNum(v) {
 
 // ── FETCH FROM SHEET ─────────────────────────────────────────────────────
 async function fetchData() {
-  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${GID}`;
+  const url = `https://docs.google.com/spreadsheets/d/e/2PACX-1vR87mnFQ85id9foVqFQk0GHYfeuv58BNVnO55X8ghnsy2xKO8eSHZl8gXThfIKo-Y4sZH_SRQPVbC-4/pub?gid=406395762&single=true&output=csv`;
   try {
     const res = await fetch(url + '&cachebust=' + Date.now(), { cache:'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
